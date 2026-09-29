@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hegka AI - Privacy Policy</title>
+    <link rel="icon" href="/images/favicon.png" sizes="any">
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+
+    <meta name="location" content="vi_VN">
+    <meta name="type" content="website">
+    <meta name="image" content="/images/banner.png">
+    <meta name="description" content="Learn how Hegka AI collects, uses, stores, and protects personal information.">
+
+    <!-- OG SEO -->
+    <meta name="og:title" content="Hegka AI - Privacy Policy">
+    <meta property="og:description" content="Learn how Hegka AI collects, uses, stores, and protects personal information.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:url" content="https://hegka.ai/privacy-policy">
+    <meta property="og:image" content="/images/banner.png">
+    <meta property="og:image:alt" content="Hegka AI platform for building voice and chat.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter SEO -->
+    <meta name="twitter:site" content="@HegkaAI">
+    <meta name="twitter:title" content="Hegka AI - Privacy Policy" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Learn how Hegka AI collects, uses, stores, and protects personal information.">
+    <meta name="twitter:image" content="/images/banner.png">
+    <meta name="twitter:image:alt" content="Hegka AI platform for building voice and chat.">
+
+    <!-- Author SEO -->
+    <meta name="author" content="Hegka AI">
+    <meta name="robots" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- FB - Verification -->
+    <meta name="facebook-domain-verification" content="ci0nuo7l803o609cffqqk7lu12c5th">
+
+    <link rel="canonical" href="https://hegka.ai/privacy-policy">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="w-full px-6 py-4 sticky top-0 z-50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="/" class="flex items-center gap-1">
+                <img src="/images/logo.svg" alt="Hegka AI Logo" class="w-6 h-6">
+                <span class="text-2xl font-semibold tracking-tight">Hegka</span>
+            </a>
+            <a href="/#demo"
+                class="inline-flex items-center justify-center px-6 py-2 text-sm font-medium text-white bg-[#1F2328] rounded-lg hover:bg-[#1F2328] transition-colors">
+                Get a demo
+            </a>
+        </div>
+    </nav>
+    <section class="flex-1 flex flex-col w-full privacy-policy-section max-w-7xl mx-auto px-4 md:px-0 py-8">
+        <h2 class="font-bold text-3xl tracking-tight text-center mb-6">Privacy policy</h2>
+        <div id="privacy-content"
+            class="h-full box p-6 bg-[#FCFCF9] rounded-xl flex-1 text-[#1F2328] text-sm leading-relaxed">
+            <div class="privacy-loading">
+                <div class="flex items-center justify-center h-full">
+                    <svg class="animate-spin h-5 w-5 text-[#1F2328]" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1F2328] px-6 pt-6 md:pt-8 pb-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-1 text-white">
+                <img src="/images/logo.svg" alt="Hegka AI Logo" class="w-6 h-6 invert-100">
+                <span class="text-2xl font-semibold tracking-tight">Hegka</span>
+            </div>
+            <div class="mt-4 md:mt-12 md:pt-8 flex items-center justify-between flex-wrap gap-4 text-[#F3F3EF] text-sm">
+                <p>© 2026 Hegka. All rights reserved.</p>
+                <div class="flex items-center gap-8">
+                    <a href="/" class="text-sm text-[#9CA3AF] hover:text-white transition-colors">Documentation</a>
+                    <a href="#" class="text-sm text-[#9CA3AF] hover:text-white transition-colors">Privacy
+                        policy</a>
+                    <a href="/terms-of-service"
+                        class="text-sm text-[#9CA3AF] hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.LANDING_API_BASE = "https://app.hegka.ai";
+        function getPrivacyPolicy() {
+            fetch(`${window.LANDING_API_BASE}/api/v1/legal/privacy-policy`)
+                .then(response => response.json())
+                .then(data => {
+                    const privacyContent = document.getElementById('privacy-content');
+                    privacyContent.innerHTML = data.content ?? '<p>Privacy policy content is not available at the moment. Please try again later.</p>';
+                })
+                .catch(error => {
+                    console.error('Error fetching privacy policy:', error);
+                    const privacyContent = document.getElementById('privacy-content');
+                    privacyContent.innerHTML = '<p>Privacy policy content is not available at the moment. Please try again later.</p>';
+                });
+        }
+
+        getPrivacyPolicy();
+    </script>
+</body>
+
+</html>
