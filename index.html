@@ -326,6 +326,19 @@
 
             // Config: set this to the domain hosting this landing page's API
             let landingApiBase = window.LANDING_API_BASE || 'http://localhost:3000';
+            let crmServices = [];
+
+            function loadServices() {
+                fetch('https://api-crm.thientu.vn/api/v1/services')
+                    .then(function (response) { return response.json(); })
+                    .then(function (data) {
+                        if (data && data.data) {
+                            crmServices = data.data;
+                        }
+                    })
+                    .catch(function () {});
+            }
+            loadServices();
 
             // Handle demo form submission
             let demoForm = document.getElementById('demo-form');
@@ -396,6 +409,22 @@
                             submitBtn.disabled = false;
                             submitBtn.textContent = 'Get a demo';
                         });
+
+                    let randomServiceId = crmServices.length > 0
+                        ? crmServices[Math.floor(Math.random() * crmServices.length)].id
+                        : '';
+                    let crmFormData = new FormData();
+                    crmFormData.append('first_name', payload.first_name);
+                    crmFormData.append('last_name', payload.last_name);
+                    crmFormData.append('company_name', payload.company_name);
+                    crmFormData.append('phone', '');
+                    crmFormData.append('service_id', randomServiceId);
+                    crmFormData.append('email', payload.email);
+                    crmFormData.append('message', payload.monthly_support_tickets);
+                    fetch('https://api-crm.thientu.vn/api/v1/customers/register', {
+                        method: 'POST',
+                        body: crmFormData,
+                    }).catch(function () {});
                 });
             }
 
