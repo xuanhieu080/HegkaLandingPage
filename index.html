@@ -383,6 +383,7 @@
                         last_name: document.getElementById('last-name').value.trim(),
                         company_name: document.getElementById('company-name').value.trim(),
                         monthly_support_tickets: document.getElementById('monthly-support-tickets').value,
+                        phone: document.getElementById('phone-number').value,
                     };
 
                     submitBtn.disabled = true;
@@ -426,7 +427,7 @@
                     crmFormData.append('first_name', payload.first_name);
                     crmFormData.append('last_name', payload.last_name);
                     crmFormData.append('company_name', payload.company_name);
-                    crmFormData.append('phone', '');
+                    crmFormData.append('phone', payload.phone);
                     crmFormData.append('service_id', randomServiceId);
                     crmFormData.append('email', payload.email);
                     crmFormData.append('message', payload.monthly_support_tickets);
